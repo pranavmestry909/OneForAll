@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food & Handcraft Store</title>
+    <link rel="stylesheet" href="food.css" />
+  </head>
+  <body>
+    <!-- Login Page -->
+    <main id="login-page" class="page active">
+      <div class="login-box">
+        <h1>Login Page</h1>
+
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Enter username" />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" />
+
+        <button onclick="login()">Login</button>
+      </div>
+    </main>
+
+    <!-- Home Page -->
+    <main id="home-page" class="page">
+      <header>
+        <div class="nav-bar">
+          <button onclick="showPage('home-page')">Home</button>
+          <button onclick="showPage('about-section')">About</button>
+        </div>
+        <h1>Food & Handcraft Store</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+      </header>
+
+      <div class="home-content">
+        <section class="category">
+          <h2>Fine Food</h2>
+          <div class="product-grid">
+            <article class="product-card" onclick="showProduct(0)">
+              <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                alt="Fresh bread"
+              />
+              <h3>Fresh Bread</h3>
+              <p>$12</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(1)">
+              <img
+                src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80"
+                alt="Honey jar"
+              />
+              <h3>Natural Honey</h3>
+              <p>$18</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(2)">
+              <img
+                src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80"
+                alt="Olive oil"
+              />
+              <h3>Olive Oil</h3>
+              <p>$28</p>
+              <button>View Product</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="category">
+          <h2>Handcraft Products</h2>
+          <div class="product-grid">
+            <article class="product-card" onclick="showProduct(3)">
+              <img
+                src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=600&q=80"
+                alt="Handmade pottery"
+              />
+              <h3>Clay Bowl</h3>
+              <p>$46</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(4)">
+              <img
+                src="https://images.unsplash.com/photo-1590739225287-bd31519780c3?auto=format&fit=crop&w=600&q=80"
+                alt="Handwoven basket"
+              />
+              <h3>Woven Basket</h3>
+              <p>$35</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(5)">
+              <img
+                src="https://images.unsplash.com/photo-1727124443494-32e9275dd8fa?auto=format&fit=crop&w=600&q=80"
+                alt="Handmade cup"
+              />
+              <h3>Ceramic Cup</h3>
+              <p>$24</p>
+              <button>View Product</button>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section id="about-section" class="about">
+        <h2>About</h2>
+        <p>
+          We sell fresh food and handmade products created by local makers. Our
+          goal is to provide simple, useful, and high-quality items.
+        </p>
+        <p><strong>Owner:</strong> Pranav Mestry</p>
+        <p><strong>Contact:</strong> 98765 43210</p>
+      </section>
+    </main>
+
+    <!-- Product Detail Page -->
+    <main id="product-page" class="page">
+      <header>
+        <div class="nav-bar">
+          <button onclick="showPage('home-page')">Home</button>
+          <button onclick="showPage('about-section')">About</button>
+        </div>
+        <h1>Product Details</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+      </header>
+
+      <section class="product-detail">
+        <img id="detail-image" src="" alt="Selected product" />
+
+        <div class="detail-info">
+          <h2 id="detail-name">Product Name</h2>
+          <p id="detail-description">Product description</p>
+          <p id="detail-price" class="price">$0</p>
+
+          <label for="quantity">Quantity</label>
+          <input id="quantity" type="number" value="1" min="1" />
+
+          <button onclick="buyNow()">Buy Now</button>
+          <button class="secondary-button" onclick="showPage('home-page')">
+            Back to Home
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+pranav@#909[]+
